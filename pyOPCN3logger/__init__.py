@@ -66,7 +66,7 @@ class LogFile(object):
         log.flush()
         log.close()
 
-    def make_headers(self, opc_object, date="Null", time="Null", epoch="Null"):
+    def make_headers(self, opc_object, date="Null", time=time_ns(), epoch="Null"):
 
         log = open(self.name, "a+")
         log.write(date)

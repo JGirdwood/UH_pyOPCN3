@@ -9,10 +9,10 @@ setuptools.setup(
     author="Joseph Girdwood",
     author_email="j.girdwood@herts.ac.uk",
     description="Library for interfacing and logging data from the Alphasense OPC-N3 developed at the university of "
-                "Hertfordshire",
+                "Hertfordshire. Please submit bug reports to https://github.com/JGirdwood/UH_pyOPCN3/projects/1",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/JGirdwood/tutorial",
+    url="https://github.com/JGirdwood/UH_pyOPCN3",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 2.7",
