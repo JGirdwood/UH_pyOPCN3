@@ -1,5 +1,5 @@
 import os
-from time import time_ns
+from time import time
 
 
 class LogFile(object):
@@ -28,7 +28,7 @@ class LogFile(object):
                 break
         return path_name
 
-    def write_data_log(self, opc_object, time=time_ns()):
+    def write_data_log(self, opc_object, time=time()):
 
         log = open(self.name, "a+")
         log.write(str(time))
@@ -66,7 +66,7 @@ class LogFile(object):
         log.flush()
         log.close()
 
-    def make_headers(self, opc_object, date="Null", time=time_ns(), epoch="Null"):
+    def make_headers(self, opc_object, date="Null", time=time(), epoch="Null"):
 
         log = open(self.name, "a+")
         log.write(date)

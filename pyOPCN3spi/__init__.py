@@ -96,13 +96,13 @@ class OPCN3(object):
         self.cs.on()
         index = 0
         for i in range(25):
-            self.bbs_adc.append(byte_to_int16(raw[index*2], raw[index*2+1]))
+            self.bbs_adc.append(byte_to_int16(raw[index], raw[index+1]))
             index += 2
         for i in range(25):
-            self.bbs_um.append(byte_to_int16(raw[index*2], raw[index*2+1]))
+            self.bbs_um.append(byte_to_int16(raw[index], raw[index+1]))
             index += 2
         for i in range(24):
-            self.bws.append(byte_to_int16(raw[index*2], raw[index*2+1]))
+            self.bws.append(byte_to_int16(raw[index], raw[index+1]))
             index += 2
         self.PMd_A_um = byte_to_int16(raw[index], raw[index+1])
         self.PMd_B_um = byte_to_int16(raw[index+2], raw[index+3])
